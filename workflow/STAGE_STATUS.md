@@ -16,10 +16,10 @@ Target: **Economics Bulletin**
 | Formal Verification Gate | PASS | Symbolic/computational certificate in `verification/` |
 | Stage 8 — Theory Freeze | PASS | `SIPPC-THEORY-FREEZE-2026-09-17-v1` |
 | Stage 9 — Repository / Reproducibility Setup | **PASS** | Production repo, pinned verification environment, CI reproduction, provenance certificate |
-| Stage 10 — Paper Construction | **NEXT** | Certify complete manuscript under canonical numbering |
-| Stage 11 — Hostile Referee / Robustness Attack | PENDING | Adversarial full-paper audit |
+| Stage 10 — Paper Construction | **PASS** | Complete short-note manuscript certified against Theory and Novelty Freeze |
+| Stage 11 — Hostile Referee / Robustness Attack | **NEXT** | Adversarial full-paper audit |
 | Stage 12 — Journal Positioning | PENDING | Economics Bulletin fit/positioning audit; target remains fixed |
-| Stage 13 — Full-Paper Integration | PENDING | Integrate Stage 11–12 corrections |
+| Stage 13 — Full-Paper Integration | PENDING | Integrate Stage 11–12 corrections and synchronize production sources |
 | Stage 14 — Submission QA | PENDING | Format, bibliography, PDF, portal package QA |
 | Stage 15 — Submission Freeze | PENDING | Immutable submission package and final freeze |
 
@@ -42,6 +42,12 @@ rho > c/2 and B > Delta/(2 rho).
 Stage 9 is certified in `workflow/STAGE9_REPOSITORY_CERTIFICATION.md`.
 
 The verification environment is pinned at `sympy==1.14.0`, and `.github/workflows/verify-theory.yml` independently reproduces the frozen-theory verification. The current verification-script SHA-256 is recorded in `verification/FORMAL_VERIFICATION_CERTIFICATE.md`.
+
+## Stage 10 certification
+
+Stage 10 is certified in `workflow/STAGE10_PAPER_CONSTRUCTION_CERTIFICATION.md`.
+
+For this gate, the canonical current paper body is `paper/submission.tex` on the production branch, with title/abstract/keywords/JEL metadata in `paper/submission_metadata.md` and bibliography in `paper/references.bib`. The older `paper/manuscript.tex` is retained as a development copy and will be synchronized during Stage 13 integration.
 
 ## Production branch naming note
 
