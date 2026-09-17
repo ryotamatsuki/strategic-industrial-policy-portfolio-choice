@@ -33,3 +33,6 @@ jobs:
 
       - name: Run formal verification gate
         run: python verification/strategic_policy_stage75a_verify.py
+
+      - name: Run Stage 11 sector-overlap stress test
+        run: python verification/stage11_sector_overlap_stress.py
