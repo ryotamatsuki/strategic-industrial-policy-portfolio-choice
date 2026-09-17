@@ -18,11 +18,28 @@
 \maketitle
 
 \begin{abstract}
-% Draft after the theory sections and introduction are frozen.
+We study competition over the composition of a predetermined regional industrial-policy capacity. Two regional governments allocate a fixed capacity across two productive sectors. Sector $A$ has a common intrinsic advantage, but simultaneous targeting of the same sector creates a real cross-regional overlap cost. When cross-regional rivalry is moderate, the decentralized policy game has a unique equilibrium in which both regions continue to favor sector $A$. A coordinator subject to the same region-specific capacity constraints instead assigns opposite sectoral orientations if and only if rivalry exceeds half the own-region curvature and policy capacity exceeds a closed-form threshold, $B>\Delta/(2\rho)$. Removing the fixed-capacity constraint makes the sectoral contests separable and eliminates this capacity threshold. The result shows how expanding policy capacity can raise the value of coordinating the composition, rather than the level, of regional industrial policy.
 \end{abstract}
 
 \section{Introduction}
-% Draft after the production theory core is complete. Keep literature positioning narrow.
+
+Regional industrial policy is often discussed as a question of how much support governments should provide. A distinct short-run problem arises once the total amount of implementable policy is largely predetermined: where should that capacity be directed? Regional governments may face the same attractive industries, yet simultaneous targeting can crowd the same projects, specialized workers, suppliers, infrastructure, or administrative resources. The resulting problem is one of policy composition rather than policy level. This paper asks whether decentralized regional competition can sustain duplication of sectoral priorities even when coordination would favor differentiated regional portfolios.
+
+The question is related to two established literatures. First, fiscal-competition models show that decentralization can distort the composition of public spending. \citet{keen_marchand_1997} establish a bias between productive public inputs and public goods for immobile residents; subsequent work studies the robustness of that composition effect to factor mobility and richer spending categories \citep{matsumoto_2000,borck_2005,borck_caliendo_steiner_2007}. \citet{arcalean_et_al_2010} likewise study budget composition across education and infrastructure in a federal economy in which both budget size and composition are endogenous. Second, the public-input competition literature shows that regional competition can generate inefficient spatial patterns. \citet{bucovetsky_2005} demonstrates that too many regions may invest in public inputs, while \citet{fenge_ehrlich_wrede_2009} obtain a divergence between decentralized infrastructure competition and efficient spatial concentration.
+
+Our focus is narrower. Each of two identical regional governments has a predetermined productive-policy capacity $B$ and allocates it between two productive sectors. Support withdrawn from one sector must be reassigned one-for-one to the other. This fixed-capacity constraint therefore couples two sectoral contests that would otherwise be independent. Sector $A$ has a common intrinsic advantage $\Delta>0$, own policy has diminishing returns $c>0$, and simultaneous same-sector targeting generates a real cross-regional overlap loss $\rho\ge0$.
+
+The main result is a simple wedge. For $0\le\rho<c$, the decentralized policy game has a unique Nash equilibrium, and both governments are oriented toward the same intrinsically more attractive sector $A$. Yet a coordinator who is subject to the same region-specific capacities assigns opposite sectoral orientations if and only if
+\[
+\rho>\frac{c}{2}
+\qquad\text{and}\qquad
+B>\frac{\Delta}{2\rho}.
+\]
+Thus rivalry can be strong enough to make duplicated sectoral priorities socially costly without being strong enough to induce decentralized differentiation. The capacity threshold has a direct interpretation: as $B$ expands, the scale of the overlap cost rises relative to the fixed intrinsic advantage of sector $A$.
+
+The fixed-capacity assumption is essential to this result. If sectoral policy levels are chosen independently, the payoff separates into two standard policy-level games and $B$ disappears. There is then no analogue of the capacity-driven differentiation threshold. The contribution is therefore not a new general theory of fiscal competition, but a compact characterization of a specific composition margin: competition over the sectoral allocation of predetermined productive-policy capacity.
+
+The remainder of the paper presents the model, solves the decentralized and coordinated allocations, derives the duplication condition, and then shows why the capacity constraint is mechanism-essential.
 
 \section{Model}
 
@@ -218,7 +235,10 @@ BR_{is}(z_{js})=
 Each sector can therefore be solved as an independent policy-level game. In particular, the capacity parameter $B$ disappears from both the strategy set and the payoff, so there can be no capacity threshold analogous to \eqref{eq:diffthreshold}. Under the fixed-capacity constraint, by contrast, withdrawing one unit of support from one sector necessarily reallocates it to the other. That one-for-one coupling is the mechanism behind the capacity-driven duplication result.
 
 \section{Conclusion}
-% Draft after Introduction and Abstract. Keep policy implications conditional and narrow.
+
+When regional industrial-policy capacity is predetermined in the short run, competition concerns not only the return to policy but also its sectoral composition. In the benchmark model, moderate same-sector rivalry is insufficient to induce decentralized differentiation: the unique Nash equilibrium keeps both regions oriented toward the same intrinsically attractive sector. Constrained coordination can nevertheless favor opposite sectoral orientations once rivalry is sufficiently strong and policy capacity exceeds $\Delta/(2\rho)$.
+
+The result is deliberately conditional. It does not imply that industrial-policy budgets should be centralized, that duplication is always inefficient, or that larger policy budgets are undesirable. The coordinator in the model cannot change or transfer regional capacity; it only internalizes the portfolio-overlap externality. The implication is narrower: as implementable policy capacity expands, coordination over \emph{where} regional policy is directed can become more valuable even when coordination over \emph{how much} policy each region controls is outside the problem. Removing the fixed-capacity constraint eliminates this comparative static, which identifies the portfolio constraint as the mechanism behind the result.
 
 \bibliographystyle{apalike}
 \bibliography{references}
