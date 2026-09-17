@@ -7,6 +7,12 @@ on:
     paths:
       - 'paper/**'
       - '.github/workflows/latex.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'paper/**'
+      - '.github/workflows/latex.yml'
   workflow_dispatch:
 
 jobs:
