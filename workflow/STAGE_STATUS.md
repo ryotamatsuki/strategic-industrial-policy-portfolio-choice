@@ -22,6 +22,7 @@ Target: **Economics Bulletin**
 | Stage 13 — Source Synchronization / Production Consistency | PASS | Duplicate manuscript source retired; single-source production structure fixed |
 | Stage 14A — Proof-Writing and Mathematical Exposition | PASS | Proof architecture and boundary/clipping exposition made referee-proof without changing theory |
 | Stage 14B — Full-Manuscript Editorial and Language Polish | PASS | Manuscript-wide prose, terminology, compression, and abstract/body synchronization completed without changing mathematics |
+| Stage 15 — Final Submission Readiness / Submission Freeze | PASS | Journal-format audit, clean build, PDF visual regression, metadata check, and canonical submission freeze completed |
 
 ## Canonical headline theorem
 
@@ -37,18 +38,21 @@ the decentralized game has a unique Nash equilibrium and both regions are A-orie
 rho > c/2 and B > Delta/(2 rho).
 ```
 
-## Canonical production sources after Stage 14B
+## Submission-frozen production sources after Stage 15
 
-- `paper/submission.tex` — manuscript body and submitted-PDF source of truth.
-- `paper/submission_metadata.md` — title, abstract, JEL classifications, and keywords.
-- `paper/references.bib` — bibliography.
+- `paper/submission.tex` — manuscript body and submitted-PDF source of truth; frozen blob `a95b6b4c8ad90921ee2ebc9836114c0e460eaa42`.
+- `paper/submission_metadata.md` — title, abstract, JEL classifications, and keywords; frozen blob `f23b9cd38ba4b9cf2c43890241f490746aca193e`.
+- `paper/references.bib` — bibliography; frozen blob `e3122714ebfe73deb5166a50617774b38dab3717`.
 - `paper/manuscript.tex` — synchronization wrapper only; no independent manuscript prose remains there.
+- `workflow/STAGE15_SUBMISSION_FREEZE.md` — canonical submission-readiness and freeze certificate.
 
-## Change control
+## Stage 15 freeze rule
 
-Production edits may improve notation, proof exposition, prose, formatting, and metadata only while preserving the frozen theory and Stage-6 novelty scope.
+The production package is now frozen for submission.
 
-The following require reopening upstream stages before modification:
+Any change to `paper/submission.tex`, `paper/submission_metadata.md`, or `paper/references.bib` reopens Stage 15 and requires a new source diff, build, current-format check, PDF render/visual QA, and freeze certificate.
+
+The following additionally require reopening the relevant upstream stages before modification:
 
 - payoff function;
 - parameter domain;
@@ -57,6 +61,8 @@ The following require reopening upstream stages before modification:
 - headline theorem or threshold;
 - certified quantifiers;
 - novelty claim.
+
+Portal-only author metadata and journal attestations remain to be verified manually at actual submission and do not alter the frozen manuscript package.
 
 ## Current title
 
