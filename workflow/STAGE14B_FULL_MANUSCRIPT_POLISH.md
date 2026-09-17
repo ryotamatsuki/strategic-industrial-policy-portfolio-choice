@@ -5,155 +5,202 @@
 **Canonical theory:** `SIPPC-THEORY-FREEZE-2026-09-17-v1`  
 **Base:** `stage14a-proof-exposition`  
 
-## Pre-edit editorial diagnosis
+## Gate verdict
+
+# **PASS — FULL-MANUSCRIPT EDITORIAL POLISH COMPLETE**
+
+Stage 14B treated the paper as a complete Economics Bulletin Note rather than as a sequence of local theory edits. The frozen model, formal results, and Stage 14A proof architecture were preserved exactly.
+
+## 1. Pre-edit editorial diagnosis
 
 **MODERATE EDITORIAL REVISION**
 
-No theory issue was found. Stage 14A proof architecture is sound and should remain frozen. The manuscript is already compact and technically mature, but it still reads in places like a sequence of accumulated gate repairs rather than a single final editorial pass. The main gains are available from role separation, terminology discipline, and compression rather than from adding content.
+No theory issue was found. The manuscript was technically mature but retained visible drafting-history artifacts: repeated fixed-envelope explanations, a dense literature paragraph, some terminology rotation between `capacity` and `envelope`, a conventional roadmap of low informational value, mild normative overstatement after the headline corollary, and a conclusion that repeated the Introduction before reaching its distinctive scope qualifications.
 
-## Executive diagnosis
+The pre-edit audit was committed before any manuscript edits.
 
-1. The Introduction reaches the theorem quickly, but its second paragraph is dense: literature positioning, negative novelty delimitation, and two literature strands are packed together. Tightening is preferable to adding citations or a separate literature section.
-2. The first, third, and fifth Introduction paragraphs repeat variants of the same fixed-envelope mechanism. The mechanism should be stated fully once and then referenced economically rather than redefined.
-3. `capacity`, `policy capacity`, `productive-policy envelope`, `committed envelope`, and `fixed-envelope equality constraint` are all understandable, but the manuscript rotates among them more than necessary. The preferred substantive term should be `committed policy envelope`; `capacity` should be retained mainly when referring to the threshold or prior literature language.
-4. The phrase “The main result is a simple wedge” is less precise than the rest of the paper. The result paragraph should state the decentralized/coordinated contrast directly.
-5. The final Introduction paragraph is a conventional roadmap that adds little in a seven-page Note. It is a safe compression candidate.
-6. The opening Model paragraph repeats the Introduction’s commitment explanation at greater length. It should define the strategy set and commitment interpretation once, compactly.
-7. The project-pool microfoundation is proportionate because it anchors the real-resource interpretation of `rho`; it should not be materially shortened.
-8. The sentence immediately after Proposition 1 is useful and should stay: it distinguishes strategic substitutes from actual differentiation.
-9. The Constrained Coordination setup is clear, but “aggregate modeled regional payoff” is slightly mechanical English. It can be made more natural without changing the benchmark.
-10. The text after Proposition 2 appropriately distinguishes asymmetry from strict differentiation and should not be compressed aggressively.
-11. The opening sentence of the headline section (“The preceding results give the central comparison.”) is expendable.
-12. The post-corollary phrase “strict differentiation is desirable” is stronger normatively than necessary. It should be tied explicitly to the constrained-coordination optimum.
-13. “The missing term is a portfolio-overlap externality” is rhetorically strong but slightly opaque. “The wedge reflects a portfolio-overlap externality” is clearer.
-14. The capacity-constraint section is already focused. Only local tightening is warranted; the optional-ceiling warning should remain explicit.
-15. The Conclusion repeats the Introduction’s setup/result almost sentence for sentence before reaching limitations. It should retain the limitations and mechanism synthesis while compressing the restatement.
+## 2. Highest-value findings
 
-## Section-by-section assessment
+1. The Introduction needed clearer role separation among motivation, literature, mechanism, headline result, and narrow contribution.
+2. The literature paragraph was accurate but somewhat defensive; it needed compression rather than expansion.
+3. `B` terminology needed to center on a predetermined, fully committed policy envelope.
+4. “The main result is a simple wedge” was too vague for the otherwise precise exposition.
+5. The roadmap sentence was expendable in a seven-page Note.
+6. The Model opening repeated the commitment interpretation more than necessary.
+7. The project-pool microfoundation should remain because it anchors the real-resource interpretation of `rho` and therefore the normative content of the coordination comparison.
+8. Stage 14A proofs should not be compressed further.
+9. “Aggregate modeled regional payoff” was correct but stylistically mechanical.
+10. “Strict differentiation is desirable” was stronger normatively than needed; the statement should be tied directly to the constrained optimum.
+11. “The missing term is a portfolio-overlap externality” could be stated more directly.
+12. The capacity-constraint section was already strong and needed only local tightening.
+13. The Conclusion should synthesize the mechanism and limitations rather than re-run the Introduction.
 
-| Section | Diagnosis | Main weakness | Required action |
-|---|---|---|---|
-| Abstract | TIGHTEN | `capacity threshold` terminology and slight setup repetition | Local terminology/flow edit |
-| Introduction | LOCAL REWRITE | Dense literature paragraph; repeated mechanism; weak roadmap value | Tighten and sharpen role separation |
-| Model | TIGHTEN | Opening repeats commitment explanation | Compress opening; preserve microfoundation |
-| Decentralized Portfolio Choice | KEEP | Already compact after Stage 14A | Only sentence-level polish if needed |
-| Constrained Coordination | TIGHTEN | Slightly mechanical benchmark wording | Local English polish; preserve proof architecture |
-| Excessive Policy Duplication | LOCAL REWRITE | One expendable signpost; mild normative overstatement; repeated result language | Tighten interpretation around the corollary |
-| Why the Capacity Constraint Matters | KEEP / TIGHTEN | Minor repetition of fixed-envelope mechanism | Preserve optional-ceiling contrast; light compression only |
-| Conclusion | LOCAL REWRITE | Repeats Introduction before synthesizing limitations | Compress result restatement; preserve scope limitations |
+## 3. Actual manuscript edits
 
-## Paragraph map
+### Abstract
+
+- Standardized the committed-envelope terminology.
+- Made the decentralized and coordinated conditions more direct.
+- Replaced `capacity threshold` language with the `B`-driven threshold tied to the fixed-envelope mechanism.
+- Recast the final sentence around the narrow portfolio mechanism rather than a general policy claim.
 
 ### Introduction
 
-1. Economic problem and composition-versus-level distinction — **TIGHTEN**. Function is clear; commitment wording can be standardized.
-2. Closest literature and delimitation — **TIGHTEN**. Keep both strands, reduce defensive phrasing.
-3. Model mechanism — **KEEP / TIGHTEN**. This is the primary full statement of the fixed-envelope coupling mechanism.
-4. Headline result and interpretation — **TIGHTEN**. Replace vague “simple wedge” and keep the threshold interpretation.
-5. Mechanism-essential counterfactual and contribution — **TIGHTEN**. Avoid repeating the full commitment definition.
-6. Roadmap — **DELETE**. Safe cut in a short Note.
+- Replaced the weaker “largely predetermined and committed” wording with the frozen interpretation: predetermined and fully committed.
+- Tightened the literature paragraph without adding citations or expanding novelty claims.
+- Standardized the main setup around a `policy envelope` rather than rotating among several near-synonyms.
+- Replaced “The main result is a simple wedge” with a direct statement of decentralized duplication versus constrained differentiation.
+- Removed the conventional roadmap sentence.
+- Compressed the mechanism-essential counterfactual and kept the contribution deliberately narrow.
 
 ### Model
 
-1. Strategy set and envelope commitment — **TIGHTEN**.
-2. Payoff/domain — **KEEP**.
-3. Project-pool microfoundation and real-resource interpretation — **KEEP**.
-4. Orientation definitions — **KEEP**.
+- Compressed the opening explanation while retaining the critical point that the prior decision over how much policy to activate lies outside the model.
+- Preserved the project-pool microfoundation.
+- Polished the real-resource interpretation of `rho` without changing its substance.
 
 ### Decentralized Portfolio Choice
 
-FOC/BR exposition — **KEEP**.  
-Proposition 1 — **KEEP**.  
-Proof — **KEEP** under Stage 14A freeze.  
-Economic implication — **KEEP**.
+- Left Proposition 1 and its proof byte-identical to Stage 14A.
+- Rephrased only the post-proof interpretation from `negative strategic interaction` to `strategic substitutability` for sharper theory language.
 
 ### Constrained Coordination
 
-1. Coordinator benchmark — **TIGHTEN** linguistically only.
-2. `p,d` transformation and curvature interpretation — **KEEP**.
-3. Proposition 2 — **KEEP**.
-4. Proof — **KEEP** under Stage 14A freeze.
-5. Asymmetry versus strict differentiation threshold — **KEEP**.
+- Rephrased the benchmark as “the aggregate regional payoff represented by the model.”
+- Preserved the qualification that `W` is a constrained-coordination objective, not an unrestricted national social-welfare function.
+- Left Proposition 2 and its proof byte-identical to Stage 14A.
 
 ### Excessive Policy Duplication
 
-1. Section-opening signpost — **DELETE**.
-2. Corollary — **KEEP**.
-3. Proof — **KEEP** under Stage 14A freeze.
-4. Economic interpretation of `rho B > Delta/2` — **TIGHTEN**.
-5. Externality interpretation — **TIGHTEN** opening wording only.
+- Removed the empty section-opening signpost.
+- Left the corollary and its proof byte-identical to Stage 14A.
+- Replaced the normatively stronger phrase `strict differentiation is desirable` with the exact statement that the constrained optimum is strictly differentiated.
+- Tightened the interpretation of `rho B > Delta/2`.
+- Replaced “The missing term...” with the clearer “The wedge reflects a portfolio-overlap externality.”
 
 ### Why the Capacity Constraint Matters
 
-Single mechanism paragraph plus equations — **KEEP / TIGHTEN**. Preserve separability and optional-ceiling warning.
+- Tightened the opening sentence.
+- Preserved the separability counterfactual and the explicit warning that an optional ceiling with unused capacity would define a different model.
 
 ### Conclusion
 
-1. Setup/result recap — **TIGHTEN** substantially.
-2. Limitations and mechanism synthesis — **KEEP / TIGHTEN**. This is the conclusion’s distinctive function.
+- Compressed the duplicated setup/result recap.
+- Kept the exact threshold and portfolio-coupling mechanism visible.
+- Preserved all limitation language: no implication that budgets should be centralized, duplication is always inefficient, or larger budgets are undesirable.
+- Ended on the mechanism rather than a new policy claim.
 
-## High-value line edits
+## 4. Terminology decisions
 
-| Location | Current wording | Problem | Recommended direction | Severity |
-|---|---|---|---|---|
-| Introduction P1 | “total amount of implementable policy is largely predetermined and committed” | Less exact than frozen interpretation | Use “policy envelope is predetermined and fully committed” | M |
-| Introduction P2 | final negative novelty sentence | Dense/defensive after long literature summary | Compress and let next paragraph state positive contribution | M |
-| Introduction P4 | “The main result is a simple wedge.” | Vague | State the decentralized/coordinated contrast directly | M |
-| Introduction P4 | “capacity threshold” | Terminology drift | Prefer “envelope threshold” or “threshold in the committed envelope” | M |
-| Introduction roadmap | full roadmap sentence | Low information value in a short Note | Delete | L |
-| Model opening | “The analysis conditions on this committed total...” | Correct but repeats Introduction | Compress while retaining no-activation-margin clarification | M |
-| Coordination setup | “aggregate modeled regional payoff” | Mechanical English | “the aggregate regional payoff represented by the model” | L |
-| Headline section opening | “The preceding results give the central comparison.” | Empty signpost | Delete | L |
-| Post-corollary | “strict differentiation is desirable when” | Normatively stronger than needed | “the constrained optimum is strictly differentiated when” | H |
-| Externality paragraph | “The missing term is...” | Slightly opaque | “The wedge reflects...” | M |
-| Conclusion P1 | near-restatement of Introduction/result | Redundant | Compress to one synthesis sentence | M |
+| Concept | Final preferred language |
+|---|---|
+| `B` | committed policy envelope / fully committed policy envelope |
+| `W` | constrained-coordination objective / aggregate regional payoff represented by the model |
+| `rho` | same-sector or cross-regional overlap loss; real implementation/congestion loss in the microfoundation |
+| duplication | policy duplication / duplicated sectoral priorities |
+| differentiation | strict sectoral differentiation / opposite sectoral orientations |
+| asymmetry | kept distinct from strict differentiation |
+| welfare | unrestricted national/social-welfare wording avoided; reduced-form qualification preserved |
+| coordination | constrained coordination; not used as a synonym for centralization |
 
-## Terminology map
+## 5. Compression result
 
-| Concept | Preferred term | Acceptable alternatives | Avoid |
-|---|---|---|---|
-| `B` | committed policy envelope / fully committed policy envelope | policy capacity when context is unambiguous | optional capacity, ceiling except in explicit counterfactual |
-| `W` | constrained-coordination objective; aggregate regional payoff represented by the model | coordinator objective | unrestricted national/social welfare |
-| `rho` | same-sector overlap loss / cross-regional overlap loss | real implementation or congestion loss | wording suggesting a pure transfer |
-| duplication | policy duplication / duplicated sectoral priorities | A-duplication in formal result | loose “overlap” when orientation is meant |
-| differentiation | strict sectoral differentiation | opposite sectoral orientations | specialization unless one allocation actually hits a boundary |
-| asymmetry | asymmetric coordinated allocation | asymmetric portfolio | differentiation when both regions remain A-oriented |
-| efficiency/welfare | relative to constrained coordination | constrained optimum | socially optimal / national welfare without qualification |
-| coordination | constrained coordination | coordinator | centralization as a synonym |
+`texcount` was run on both the exact Stage 14A canonical source and the final Stage 14B source.
 
-## Redundancy map
+```text
+Stage 14A: 2,020 words
+Stage 14B: 1,859 words
+Change:      -161 words (-8.0%)
+```
 
-- **Fully committed `B`:** full definition belongs in Model; Introduction needs one concise mechanism statement; Conclusion needs only a reminder.
-- **One-for-one reallocation:** full explanation belongs in Introduction/model mechanism and capacity-constraint section; elsewhere avoid repetition.
-- **Duplicated Nash vs differentiated coordination:** full formal statement belongs in the corollary; Introduction and abstract should state it once each; Conclusion should synthesize rather than restate the theorem verbatim.
-- **Threshold `B > Delta/(2 rho)`:** retain in abstract, Introduction, formal result, and conclusion only if each serves a distinct function. Do not repeat it in adjacent prose more than needed.
-- **No-centralization implication:** belongs primarily in Conclusion; earlier prose should avoid repeated defensive caveats.
+The Stage 14A source used for this comparison was reconstructed from the Stage 14B diff and compiled; its rendered PDF was pixel-identical on all seven pages to the saved Stage 14A canonical PDF. This independently validates the pre-edit word-count baseline.
 
-## Compression plan
+The final manuscript remains **7 pages**.
 
-Current manuscript length is approximately **2.5–2.7k prose-equivalent words** excluding displayed mathematics and bibliography. A safe editorial reduction is roughly **100–200 words**, concentrated in the Introduction, Model opening, headline-result discussion, and Conclusion. The project-pool microfoundation, Stage 14A proofs, formal statements, and boundary discussion should not be compressed materially.
+## 6. Regression certification
 
-## Mandatory before submission
+Direct source comparison between the exact Stage 14A and Stage 14B manuscript files established:
 
-1. Standardize `B` terminology around the committed-envelope interpretation without making prose repetitive.
-2. Tighten the Introduction so literature, mechanism, theorem, and contribution each have distinct roles.
-3. Remove or rephrase wording that overstates the normative interpretation of constrained coordination.
-4. Preserve Stage 14A proof architecture unchanged.
-5. Reduce Conclusion/Introduction duplication.
-6. Synchronize the submission-interface abstract with final terminology.
+```text
+Proposition environments: 2 vs 2 — byte-identical
+Corollary environments:   1 vs 1 — byte-identical
+Proof environments:       3 vs 3 — byte-identical
+Equation environments:   12 vs 12 — byte-identical
+```
 
-## Recommended
+Therefore Stage 14B changed no formal statement, proof, or labeled equation.
 
-- Delete the roadmap sentence.
-- Replace empty section-opening signposts with substantive transitions.
-- Improve mechanical phrases such as “aggregate modeled regional payoff.”
-- Compress repeated reminders that the envelope is fixed.
+Explicitly preserved:
 
-## Optional
+- payoff function;
+- strategy set;
+- fixed-envelope equality constraint;
+- parameter domain `Delta > 0, c > 0, 0 <= rho < c, B > 0`;
+- Nash equilibrium;
+- planner solution;
+- knife-edge result;
+- `rho > c/2` threshold;
+- `B > Delta/(2 rho)` threshold;
+- `unique`, `every`, `exactly`, and `if and only if` quantifiers;
+- constrained-coordination benchmark;
+- Stage 6 novelty scope;
+- Stage 14A proof architecture.
 
-- Minor sentence-rhythm edits where they do not change technical terminology.
-- Very small reductions in repeated uses of “regional” where the referent is already clear.
+`paper/references.bib` was not changed.
 
-## Editing constraint
+## 7. Build and PDF QA
 
-All edits are editorial. No payoff, strategy set, parameter domain, equilibrium, planner solution, threshold, proposition/corollary content, certified quantifier, knife-edge result, coordinator benchmark, novelty scope, or Stage 14A proof architecture may change.
+Full local build sequence:
+
+1. `pdflatex`
+2. `bibtex.original`
+3. repeated `pdflatex` passes until references stabilized
+
+Final pass result:
+
+- 7 pages;
+- letter size;
+- no undefined citations;
+- no undefined references;
+- no Overfull boxes;
+- no Underfull boxes;
+- no remaining LaTeX warnings.
+
+All seven pages were rendered at 180 dpi and visually inspected. No clipping, overlap, broken glyph, equation overflow, or section-layout regression was observed.
+
+A render comparison against Stage 14A confirmed the expected text-flow changes while retaining seven pages. As an additional control, the reconstructed Stage 14A source produced a PDF pixel-identical to the saved Stage 14A PDF on all seven pages.
+
+## 8. Abstract/body synchronization
+
+The submission-interface abstract was updated after the manuscript edit. It now uses the same committed-envelope interpretation, decentralized result, coordinated condition, `B > Delta/(2 rho)` threshold, separability counterfactual, and narrow portfolio-mechanism framing as the paper.
+
+No new claim was introduced in the abstract.
+
+## 9. Intentionally rejected edits
+
+- No new literature was added: Stage 14B is editorial, not a novelty reopening.
+- The project-pool microfoundation was not shortened materially because it supports the real-resource interpretation of the overlap term.
+- Stage 14A proof steps were not compressed, even where shorter wording was possible, because explicit boundary and quantifier logic was intentionally certified there.
+- The optional-ceiling warning was retained because it prevents a likely model-interpretation error.
+- The title was not changed; terminology polishing in the body does not require reopening the established title.
+
+## 10. Files and commits
+
+Files materially edited:
+
+- `paper/submission.tex`
+- `paper/submission_metadata.md`
+- `workflow/STAGE14B_FULL_MANUSCRIPT_POLISH.md`
+- `workflow/STAGE_STATUS.md` (gate status only)
+
+Key editorial commits:
+
+- manuscript prose: `670c035f877870b51dc25baf2434ddb54e5ba6f9`
+- abstract synchronization: `0d0e4c1e27eefabd509999f45d7e1469beb86b01`
+- abstract threshold wording cleanup: `56f8f114257f276c3be9c3ca6a8f6a5e9d801161`
+
+## Final decision
+
+The manuscript now reads as a deliberately short theory Note rather than a compressed long paper. The research question, narrow novelty, fixed-envelope mechanism, headline theorem, and limits of the coordination benchmark are all recoverable quickly without broadening the contribution.
+
+**CANONICAL STAGE 14B — PASS**
