@@ -21,6 +21,7 @@ Target: **Economics Bulletin**
 | Stage 12 — Manuscript Hardening | PASS | Fully committed envelope, coordinator-objective wording, and novelty positioning repaired |
 | Stage 13 — Source Synchronization / Production Consistency | PASS | Duplicate manuscript source retired; single-source production structure fixed |
 | Stage 14A — Proof-Writing and Mathematical Exposition | PASS | Proof architecture and boundary/clipping exposition made referee-proof without changing theory |
+| Stage 14B — Full-Manuscript Editorial and Language Polish | PASS | Manuscript-wide prose, terminology, compression, and abstract/body synchronization completed without changing mathematics |
 
 ## Canonical headline theorem
 
@@ -36,7 +37,7 @@ the decentralized game has a unique Nash equilibrium and both regions are A-orie
 rho > c/2 and B > Delta/(2 rho).
 ```
 
-## Canonical production sources after Stage 14A
+## Canonical production sources after Stage 14B
 
 - `paper/submission.tex` — manuscript body and submitted-PDF source of truth.
 - `paper/submission_metadata.md` — title, abstract, JEL classifications, and keywords.
