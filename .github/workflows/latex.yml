@@ -1,0 +1,34 @@
+name: Compile Economics Bulletin submission
+
+on:
+  push:
+    branches:
+      - stage9-manuscript-production
+    paths:
+      - 'paper/**'
+      - '.github/workflows/latex.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compile submission PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: submission.tex
+          working_directory: paper
+
+      - name: Verify PDF exists
+        run: |
+          test -f paper/submission.pdf
+          pdfinfo paper/submission.pdf | tee /tmp/pdfinfo.txt
+
+      - name: Upload submission PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: economics-bulletin-submission
+          path: paper/submission.pdf
