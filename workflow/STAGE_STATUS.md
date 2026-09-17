@@ -15,7 +15,11 @@ Target: **Economics Bulletin**
 | Stage 7.5A — Quantifier / Generality Certification | PASS | `unique`, `every`, `iff`, boundaries certified |
 | Formal Verification Gate | PASS | Symbolic/computational certificate in `verification/` |
 | Stage 8 — Theory Freeze | PASS | `SIPPC-THEORY-FREEZE-2026-09-17-v1` |
-| Stage 9 — Manuscript Production | NEXT | Work on `stage9-manuscript-production` branch |
+| Stage 9 | PASS | Canonical pre-manuscript production gate completed |
+| Stage 10 — Economics Bulletin Manuscript Construction | PASS | Canonical body in `paper/submission.tex`; metadata in `paper/submission_metadata.md` |
+| Stage 11 — Hostile Referee / Robustness Attack | PASS | No theory rollback; interpretation and positioning vulnerabilities identified |
+| Stage 12 — Manuscript Hardening | PASS | Fully committed envelope, coordinator-objective wording, and novelty positioning repaired |
+| Stage 13 — Source Synchronization / Production Consistency | PASS | Duplicate manuscript source retired; single-source production structure fixed |
 
 ## Canonical headline theorem
 
@@ -31,26 +35,27 @@ the decentralized game has a unique Nash equilibrium and both regions are A-orie
 rho > c/2 and B > Delta/(2 rho).
 ```
 
-## Stage 9 constraints
+## Canonical production sources after Stage 13
 
-Stage 9 may:
+- `paper/submission.tex` — manuscript body and submitted-PDF source of truth.
+- `paper/submission_metadata.md` — title, abstract, JEL classifications, and keywords.
+- `paper/references.bib` — bibliography.
+- `paper/manuscript.tex` — synchronization wrapper only; no independent manuscript prose remains there.
 
-- draft and revise title, abstract, introduction, model exposition, proofs, discussion, conclusion, and references;
-- simplify notation without changing mathematical content;
-- shorten proofs while preserving certified statements;
-- improve literature positioning within the Stage 6 Novelty Freeze.
+## Change control
 
-Stage 9 may not:
+Production edits may improve notation, proof exposition, prose, formatting, and metadata only while preserving the frozen theory and Stage-6 novelty scope.
 
-- add strategic variables;
-- endogenize `B`;
-- change the payoff function;
-- expand the parameter domain;
-- elevate strong-rivalry multiplicity to a core result;
-- expand novelty claims;
-- change the constrained-coordination benchmark;
-- change certified quantifiers without reopening the relevant stage.
+The following require reopening upstream stages before modification:
 
-## Working title
+- payoff function;
+- parameter domain;
+- strategic variables;
+- constrained-coordination benchmark;
+- headline theorem or threshold;
+- certified quantifiers;
+- novelty claim.
+
+## Current title
 
 **Fixed Policy Capacity and the Duplication of Regional Industrial Policy**
