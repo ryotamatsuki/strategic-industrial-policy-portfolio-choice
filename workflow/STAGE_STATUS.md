@@ -17,8 +17,8 @@ Target: **Economics Bulletin**
 | Stage 8 — Theory Freeze | PASS | `SIPPC-THEORY-FREEZE-2026-09-17-v1` |
 | Stage 9 — Repository / Reproducibility Setup | **PASS** | Production repo, pinned verification environment, CI reproduction, provenance certificate |
 | Stage 10 — Paper Construction | **PASS** | Complete short-note manuscript certified against Theory and Novelty Freeze |
-| Stage 11 — Hostile Referee / Robustness Attack | **NEXT** | Adversarial full-paper audit |
-| Stage 12 — Journal Positioning | PENDING | Economics Bulletin fit/positioning audit; target remains fixed |
+| Stage 11 — Hostile Referee / Robustness Attack | **PASS WITH MANDATORY REVISIONS** | No fatal defect; seven Stage 13 revisions recorded; sector-specific overlap stress test added |
+| Stage 12 — Journal Positioning | **NEXT** | Economics Bulletin fit/positioning audit; target remains fixed |
 | Stage 13 — Full-Paper Integration | PENDING | Integrate Stage 11–12 corrections and synchronize production sources |
 | Stage 14 — Submission QA | PENDING | Format, bibliography, PDF, portal package QA |
 | Stage 15 — Submission Freeze | PENDING | Immutable submission package and final freeze |
@@ -48,6 +48,14 @@ The verification environment is pinned at `sympy==1.14.0`, and `.github/workflow
 Stage 10 is certified in `workflow/STAGE10_PAPER_CONSTRUCTION_CERTIFICATION.md`.
 
 For this gate, the canonical current paper body is `paper/submission.tex` on the production branch, with title/abstract/keywords/JEL metadata in `paper/submission_metadata.md` and bibliography in `paper/references.bib`. The older `paper/manuscript.tex` is retained as a development copy and will be synchronized during Stage 13 integration.
+
+## Stage 11 certification
+
+Stage 11 is certified in `workflow/STAGE11_HOSTILE_REFEREE.md`.
+
+No fatal mathematical or prior-art defect was found. Mandatory Stage 13 revisions concern: constrained-surplus wording, project-pool interpretation, equal-sector-overlap benchmark scope, generic-mechanism acknowledgement, literature additions, strong-rivalry scope, and symmetry/local-robustness wording.
+
+The symbolic robustness script `verification/stage11_sector_overlap_stress.py` checks a sector-specific overlap perturbation. It confirms local robustness of the headline mechanism while showing that arbitrary sector-specific crowding can change the large-capacity orientation result.
 
 ## Production branch naming note
 
