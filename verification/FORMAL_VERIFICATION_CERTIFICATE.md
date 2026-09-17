@@ -2,8 +2,12 @@
 ## Formal Verification Gate Certificate
 
 **Status:** PASS  
-**Verification script:** `strategic_policy_stage75a_verify.py`  
-**SHA-256:** `dd5cb8376e734bed6c6b34b5d04d3038a0d4076adb522e5af864dea60827c147`
+**Verification script:** `verification/strategic_policy_stage75a_verify.py`  
+**Current SHA-256:** `ccce1a7bf133753433c7f3c637f8032a4b22103e3c2f892466627628574e373d`  
+**Pinned verification dependency:** `sympy==1.14.0`  
+**Reproducibility CI:** `.github/workflows/verify-theory.yml`
+
+The current script hash and verification output were independently reproduced by GitHub Actions on Python 3.13.15 / Ubuntu 24.04 in workflow run `35215783638` on 2026-09-17. The workflow completed successfully and printed the SHA-256 above before running the verification script.
 
 ### Certified production domain
 
@@ -91,6 +95,14 @@ if and only if
 - 10,000 randomized production-domain checks of theorem conditions.
 - 2,000 randomized coordinator problems, each compared against 100 random feasible deviations.
 - No counterexample found.
+
+### Reproducibility record
+
+The Stage 9 repository audit added:
+
+- `verification/requirements.txt`, pinning `sympy==1.14.0`;
+- `.github/workflows/verify-theory.yml`, which installs the pinned environment, records the script SHA-256, and executes the full verification gate;
+- successful GitHub Actions run `35215783638`.
 
 ### Scope of certification
 
