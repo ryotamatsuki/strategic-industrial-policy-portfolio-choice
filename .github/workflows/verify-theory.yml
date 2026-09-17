@@ -1,0 +1,35 @@
+name: Verify frozen theory
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'verification/**'
+      - '.github/workflows/verify-theory.yml'
+  pull_request:
+    paths:
+      - 'verification/**'
+      - 'theory/**'
+      - '.github/workflows/verify-theory.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install pinned dependencies
+        run: pip install -r verification/requirements.txt
+
+      - name: Record verification script hash
+        run: sha256sum verification/strategic_policy_stage75a_verify.py
+
+      - name: Run formal verification gate
+        run: python verification/strategic_policy_stage75a_verify.py
