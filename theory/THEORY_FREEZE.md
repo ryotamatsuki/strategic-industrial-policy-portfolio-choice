@@ -62,13 +62,7 @@ The benchmark is **constrained coordination**, not unrestricted centralization. 
 Define
 
 ```math
-p=\frac{x_1+x_2}{2}-\frac B2,\qquad d=\frac{x_1-x_2}{2.
-```
-
-The intended second formula is
-
-```math
-d=\frac{x_1-x_2}{2}.
+p=\frac{x_1+x_2}{2}-\frac B2,\qquad d=\frac{x_1-x_2}{2}.
 ```
 
 The feasible set is
