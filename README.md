@@ -9,7 +9,8 @@ Production repository for the Economics Bulletin theory note currently titled:
 - Theory status: **FROZEN**
 - Canonical freeze: `SIPPC-THEORY-FREEZE-2026-09-17-v1`
 - Formal verification gate: **PASS**
-- Production phase: Stage 9 manuscript construction
+- Stage 9 — Repository / Reproducibility Setup: **PASS**
+- Next canonical gate: **Stage 10 — Paper Construction**
 
 ## Core result
 
@@ -29,10 +30,19 @@ The economic mechanism is that a fixed policy capacity couples sectoral contests
 ## Repository structure
 
 - `theory/` — canonical theory freeze and certified propositions
-- `verification/` — symbolic/computational verification script and certificate
+- `verification/` — symbolic/computational verification script, pinned dependency, and certificate
 - `literature/` — frozen novelty positioning and closest prior art
-- `workflow/` — canonical stage status and change-control rules
+- `workflow/` — canonical stage status, Stage 9 certification, and change-control records
 - `paper/` — manuscript production files
+- `.github/workflows/verify-theory.yml` — reproducibility CI for frozen theory
+
+## Reproducibility
+
+The verification environment pins `sympy==1.14.0`. GitHub Actions independently executes the full verification gate and records the verification-script SHA-256 before execution. See `workflow/STAGE9_REPOSITORY_CERTIFICATION.md` and `verification/FORMAL_VERIFICATION_CERTIFICATE.md`.
+
+## Production branch
+
+`stage9-manuscript-production` is the historical branch name created before correction of the canonical stage numbering. Its manuscript work is classified as **Stage 10 — Paper Construction**.
 
 ## Change control
 
