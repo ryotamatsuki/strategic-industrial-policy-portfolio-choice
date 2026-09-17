@@ -18,31 +18,207 @@
 \maketitle
 
 \begin{abstract}
-% Stage 9: draft only from the frozen theory and novelty files.
+% Draft after the theory sections and introduction are frozen.
 \end{abstract}
 
 \section{Introduction}
-% Keep literature positioning narrow. Do not expand the Stage 6 novelty claim.
+% Draft after the production theory core is complete. Keep literature positioning narrow.
 
 \section{Model}
-% Source of truth: ../theory/THEORY_FREEZE.md
+
+Consider two identical regions, indexed by $i\in\{1,2\}$, and two productive sectors, $A$ and $B$. Each regional government has a predetermined short-run industrial-policy capacity $B>0$. Region $i$ allocates $x_i\in[0,B]$ to sector $A$ and the residual $B-x_i$ to sector $B$. The constraint therefore fixes the total amount of policy that each region can implement and leaves only its sectoral composition as a strategic choice.
+
+Sector $A$ has a common intrinsic advantage $\Delta>0$ over sector $B$. Own-region policy exhibits diminishing returns, governed by $c>0$, while simultaneous targeting of the same sector by the two regions creates a real overlap cost $\rho\ge 0$. Region $i$'s payoff is
+\begin{equation}
+\begin{split}
+U_i(x_i,x_j)= {} &(a+\Delta)x_i-\frac{c}{2}x_i^2-\rho x_i x_j \\
+&+a(B-x_i)-\frac{c}{2}(B-x_i)^2
+-\rho(B-x_i)(B-x_j),
+\end{split}
+\label{eq:payoff}
+\end{equation}
+where $j\neq i$. Throughout the main analysis,
+\begin{equation}
+\Delta>0,\qquad c>0,\qquad 0\le \rho<c,\qquad B>0.
+\label{eq:domain}
+\end{equation}
+The restriction $\rho<c$ isolates the region in which decentralized portfolio choice has a unique equilibrium. The stronger-rivalry case is not needed for the result below.
+
+A simple project-pool interpretation delivers \eqref{eq:payoff} exactly. Suppose sector $s$ contains a mass $M$ of potential projects and that targeting intensity $z_{is}\in[0,B]$ reaches any project with probability $q_{is}=z_{is}/\bar z$, where $\bar z\ge B$. A project targeted by region $i$ yields local value $v_s$, while overlapping targeting by both regions generates a real implementation or congestion loss $\ell>0$ for each region. With convex implementation cost $\kappa z_{is}^2/2$, expected sectoral payoff is
+\[
+M\left(v_s q_{is}-\ell q_{is}q_{js}\right)-\frac{\kappa}{2}z_{is}^2
+=a_s z_{is}-\frac{c}{2}z_{is}^2-\rho z_{is}z_{js},
+\]
+where $a_s=Mv_s/\bar z$, $c=\kappa$, and $\rho=M\ell/\bar z^2$. Setting $a_A=a+\Delta$ and $a_B=a$ gives \eqref{eq:payoff}. Thus $\rho$ is interpreted as a real same-sector overlap loss rather than a pure transfer of subsidy rents.
+
+We call a region \emph{$A$-oriented} if $x_i>B/2$, \emph{$B$-oriented} if $x_i<B/2$, and \emph{neutral} if $x_i=B/2$. The two regions display \emph{policy duplication} when they have the same sectoral orientation. They display \emph{strict sectoral differentiation} when, up to relabeling, $x_1>B/2>x_2$.
 
 \section{Decentralized Portfolio Choice}
-% Proposition 1: unique Nash equilibrium in the production domain.
+
+Differentiating \eqref{eq:payoff} gives
+\begin{equation}
+\frac{\partial U_i}{\partial x_i}
+=\Delta+B(c+\rho)-2cx_i-2\rho x_j,
+\qquad
+\frac{\partial^2 U_i}{\partial x_i^2}=-2c<0.
+\label{eq:foc}
+\end{equation}
+Hence the global best response is
+\begin{equation}
+BR_i(x_j)=
+\Pi_{[0,B]}
+\left[
+\frac{\Delta+B(c+\rho)-2\rho x_j}{2c}
+\right],
+\label{eq:br}
+\end{equation}
+where $\Pi_{[0,B]}$ denotes projection onto $[0,B]$.
+
+\begin{proposition}[Decentralized portfolio choice]
+Under \eqref{eq:domain}, the policy game has a unique Nash equilibrium. It is
+\begin{equation}
+(x_1^N,x_2^N)=
+\begin{cases}
+(B,B), & B\le \dfrac{\Delta}{c+\rho},\\[6pt]
+\left(
+\dfrac{B}{2}+\dfrac{\Delta}{2(c+\rho)},
+\dfrac{B}{2}+\dfrac{\Delta}{2(c+\rho)}
+\right),
+& B>\dfrac{\Delta}{c+\rho}.
+\end{cases}
+\label{eq:ne}
+\end{equation}
+In particular, both regions are $A$-oriented for every admissible parameter vector.
+\end{proposition}
+
+\begin{proof}
+Because projection is nonexpansive, \eqref{eq:br} implies
+\[
+|BR_i(x)-BR_i(y)|\le \frac{\rho}{c}|x-y|.
+\]
+Under $\rho<c$, the joint best-response mapping is therefore a contraction and has a unique fixed point. Symmetry then implies $x_1^N=x_2^N=x^N$. If the upper bound does not bind, the fixed-point equation from \eqref{eq:br} gives
+\[
+x^N=\frac{B}{2}+\frac{\Delta}{2(c+\rho)}.
+\]
+This is below $B$ exactly when $B>\Delta/(c+\rho)$. Otherwise the unique fixed point is $(B,B)$. In both cases $x_i^N>B/2$ because $\Delta>0$.
+\end{proof}
+
+Thus negative strategic interaction does not by itself generate different regional sectoral priorities. Even though $BR_i'(x_j)=-\rho/c<0$ wherever the best response is interior, both governments continue to favor the same intrinsically more attractive sector.
 
 \section{Constrained Coordination}
-% Proposition 2: global constrained coordinator solution.
-% Use "constrained coordination", not unrestricted social planner/centralization.
+
+To isolate the portfolio externality, consider a coordinator who maximizes
+\[
+W(x_1,x_2)=U_1(x_1,x_2)+U_2(x_2,x_1)
+\]
+subject to the same region-specific capacity constraints $x_i\in[0,B]$. The coordinator cannot change either region's total capacity or transfer policy capacity across regions; it only coordinates sectoral composition.
+
+Define
+\begin{equation}
+p=\frac{x_1+x_2}{2}-\frac{B}{2},
+\qquad
+d=\frac{x_1-x_2}{2}.
+\label{eq:pd}
+\end{equation}
+The feasible set becomes $|p|+|d|\le B/2$. Up to an additive constant independent of $(p,d)$,
+\begin{equation}
+W(p,d)=2\Delta p-2(c+2\rho)p^2-2(c-2\rho)d^2.
+\label{eq:welfare}
+\end{equation}
+The coefficient on $d^2$ separates the decentralized and coordinated incentives. When $\rho<c/2$, coordination favors equal regional portfolios. When $\rho>c/2$, holding the mean portfolio fixed, welfare rises as the two regional portfolios move apart.
+
+\begin{proposition}[Constrained coordination]
+Suppose \eqref{eq:domain} holds.
+\begin{enumerate}
+\item If $0\le\rho<c/2$, every coordinated optimum is symmetric. It equals $(B,B)$ when $B\le \Delta/(c+2\rho)$ and otherwise satisfies
+\[
+x_1^P=x_2^P=\frac{B}{2}+\frac{\Delta}{2(c+2\rho)}.
+\]
+\item If $\rho>c/2$, the coordinated optimum is unique up to regional relabeling. For $B\le \Delta/(c+2\rho)$ it is $(B,B)$. For larger $B$ it is
+\begin{equation}
+(B,z^P)\quad\text{or}\quad(z^P,B),
+\qquad
+z^P=\max\left\{0,\frac{\Delta+B(c-2\rho)}{2c}\right\}.
+\label{eq:planner}
+\end{equation}
+\end{enumerate}
+At the knife edge $\rho=c/2$, sufficiently large $B$ produces a continuum of coordinated optima with the same mean allocation.
+\end{proposition}
+
+\begin{proof}
+Equation \eqref{eq:welfare} gives the result directly. If $\rho<c/2$, welfare is strictly decreasing in $d^2$, so every optimum has $d=0$. Maximizing over $p\in[-B/2,B/2]$ yields the stated symmetric solution.
+
+If $\rho>c/2$, welfare is increasing in $d^2$ for fixed $p$. Hence an optimum lies on the boundary $|d|=B/2-|p|$. Since $\Delta>0$, an optimum can be represented, up to relabeling, on the edge $(x_1,x_2)=(B,z)$ with $z\in[0,B]$. Substitution into $W$ yields a strictly concave quadratic in $z$ whose unconstrained maximizer is
+\[
+\frac{\Delta+B(c-2\rho)}{2c}.
+\]
+Clipping this value to $[0,B]$ gives \eqref{eq:planner}. The upper bound binds exactly when $B\le\Delta/(c+2\rho)$. At $\rho=c/2$, the $d^2$ term in \eqref{eq:welfare} vanishes, giving the stated knife-edge indifference.
+\end{proof}
+
+For $\rho>c/2$, asymmetry begins once
+\[
+B>\frac{\Delta}{c+2\rho}.
+\]
+This is not yet sectoral differentiation: for an intermediate range both regions remain $A$-oriented. Strict differentiation requires $z^P<B/2$, which is equivalent to
+\begin{equation}
+B>\frac{\Delta}{2\rho}.
+\label{eq:diffthreshold}
+\end{equation}
+At equality, the low-$A$ region is neutral, $z^P=B/2$.
 
 \section{Excessive Policy Duplication}
-% Headline theorem/corollary:
-% rho > c/2 and B > Delta/(2 rho) iff every coordinated optimum has opposite orientations,
-% within Delta>0, c>0, 0<=rho<c, B>0.
+
+The preceding results give the central comparison.
+
+\begin{corollary}[Excessive policy duplication]
+Under \eqref{eq:domain}, the unique decentralized equilibrium is $A$-duplicated and every constrained coordinated optimum is strictly sectorally differentiated if and only if
+\begin{equation}
+\rho>\frac{c}{2}
+\qquad\text{and}\qquad
+B>\frac{\Delta}{2\rho}.
+\label{eq:headline}
+\end{equation}
+Equivalently, in the headline region $c/2<\rho<c$ and $B>\Delta/(2\rho)$, both decentralized governments are $A$-oriented, whereas every coordinated optimum has one $A$-oriented region and one $B$-oriented region.
+\end{corollary}
+
+\begin{proof}
+Proposition 1 implies that the decentralized equilibrium is unique and $A$-duplicated throughout the production domain. By Proposition 2, strict coordinated differentiation is impossible for $\rho<c/2$, while at $\rho=c/2$ a symmetric coordinated optimum remains available. For $\rho>c/2$, \eqref{eq:planner} is strictly differentiated exactly when $z^P<B/2$. When $z^P>0$,
+\[
+z^P-\frac{B}{2}=\frac{\Delta-2\rho B}{2c},
+\]
+so $z^P<B/2$ if and only if $B>\Delta/(2\rho)$. If the lower bound in \eqref{eq:planner} binds, then $z^P=0<B/2$ and the same inequality necessarily holds. Thus \eqref{eq:headline} is necessary and sufficient.
+\end{proof}
+
+The result isolates an intermediate rivalry region. Cross-regional rivalry is strong enough that a coordinator values opposite sectoral orientations, but not strong enough to break the unique decentralized symmetry. Policy capacity then determines whether this latent coordination motive becomes strong enough to overturn the common intrinsic advantage of sector $A$. Rearranging \eqref{eq:diffthreshold}, strict differentiation is desirable when
+\[
+\rho B>\frac{\Delta}{2}.
+\]
+A larger capacity therefore increases the importance of coordinating \emph{where} regional industrial policy is directed even though each region's total policy capacity remains fixed.
+
+The missing term is a portfolio-overlap externality. A marginal increase in region $i$'s allocation to sector $A$ changes region $j$'s payoff by
+\begin{equation}
+\frac{\partial U_j}{\partial x_i}=\rho(B-2x_j).
+\label{eq:externality}
+\end{equation}
+Whenever region $j$ is $A$-oriented, this effect is negative. Region $i$ internalizes the effect of region $j$'s targeting on its own return, but not the reciprocal effect \eqref{eq:externality} that its portfolio imposes on the other region. Constrained coordination internalizes both sides.
 
 \section{Why the Capacity Constraint Matters}
-% Brief separability counterfactual only; do not build a second model.
+
+The fixed-capacity constraint is not a normalization. It is what turns sectoral policy competition into a portfolio problem. To see this, remove the constraint and allow each government to choose $z_{iA}\ge0$ and $z_{iB}\ge0$ independently. Then
+\begin{equation}
+U_i=\sum_{s\in\{A,B\}}
+\left(a_s z_{is}-\frac{c}{2}z_{is}^2-\rho z_{is}z_{js}\right).
+\label{eq:unconstrained}
+\end{equation}
+The two sectors are additively separable, with best response
+\[
+BR_{is}(z_{js})=
+\max\left\{0,\frac{a_s-\rho z_{js}}{c}\right\}.
+\]
+Each sector can therefore be solved as an independent policy-level game. In particular, the capacity parameter $B$ disappears from both the strategy set and the payoff, so there can be no capacity threshold analogous to \eqref{eq:diffthreshold}. Under the fixed-capacity constraint, by contrast, withdrawing one unit of support from one sector necessarily reallocates it to the other. That one-for-one coupling is the mechanism behind the capacity-driven duplication result.
 
 \section{Conclusion}
+% Draft after Introduction and Abstract. Keep policy implications conditional and narrow.
 
 \bibliographystyle{apalike}
 \bibliography{references}
