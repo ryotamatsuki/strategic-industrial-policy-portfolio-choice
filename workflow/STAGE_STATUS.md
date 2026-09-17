@@ -20,6 +20,7 @@ Target: **Economics Bulletin**
 | Stage 11 — Hostile Referee / Robustness Attack | PASS | No theory rollback; interpretation and positioning vulnerabilities identified |
 | Stage 12 — Manuscript Hardening | PASS | Fully committed envelope, coordinator-objective wording, and novelty positioning repaired |
 | Stage 13 — Source Synchronization / Production Consistency | PASS | Duplicate manuscript source retired; single-source production structure fixed |
+| Stage 14A — Proof-Writing and Mathematical Exposition | PASS | Proof architecture and boundary/clipping exposition made referee-proof without changing theory |
 
 ## Canonical headline theorem
 
@@ -35,7 +36,7 @@ the decentralized game has a unique Nash equilibrium and both regions are A-orie
 rho > c/2 and B > Delta/(2 rho).
 ```
 
-## Canonical production sources after Stage 13
+## Canonical production sources after Stage 14A
 
 - `paper/submission.tex` — manuscript body and submitted-PDF source of truth.
 - `paper/submission_metadata.md` — title, abstract, JEL classifications, and keywords.
