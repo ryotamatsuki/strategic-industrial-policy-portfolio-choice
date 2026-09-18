@@ -31,3 +31,12 @@ Enter and verify author name, affiliation, email, and coauthor order directly in
 `paper/submission.tex`
 
 The submitted PDF must not contain a title page or abstract. The abstract above is for the submission interface only.
+
+
+## Generative AI use disclosure
+
+Use the following disclosure if the Economics Bulletin submission interface, declarations section, or editorial office requests a statement on generative-AI use:
+
+> Generative AI tools, including ChatGPT by OpenAI, were used during the preparation of this work for research assistance, mathematical cross-checking, literature-search support, code and reproducibility assistance, and language editing. The author reviewed and verified the mathematical results, references, interpretations, and final manuscript and takes full responsibility for the content.
+
+This disclosure is administrative submission metadata only. It does not alter the manuscript PDF. Before submission, the author must confirm that the wording accurately describes the actual use and must follow any more specific disclosure field or wording required by the live submission interface.
